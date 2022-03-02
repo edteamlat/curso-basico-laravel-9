@@ -3,18 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return 'Home';
+    return view('welcome');
 });
 
-Route::prefix('/company')->group(function () {
-
-    Route::get('/nosotros', function () {
-        return 'Nosotros.';
-    });
-
-    Route::get('/contacto', function () {
-        return 'Contacto.';
-    });
-
-});
 
