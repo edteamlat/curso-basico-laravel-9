@@ -13,7 +13,8 @@
             <h1>{{ $post->title }}</h1>
             <p>{{ $post->content }}</p>
         </article>
-        <a href="/"><< Inicio</a>
+        <a href="/" class="btn">&#8592; Inicio</a>
+        <a href="/posts/{{ $post->id }}/edit" class="btn">Editar</a>
     </div>
 </body>
 </html>

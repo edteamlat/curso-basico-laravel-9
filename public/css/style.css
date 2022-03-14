@@ -13,6 +13,11 @@
     border-bottom: 1px solid #ccc;
 }
 
+.container article h1 a{
+    color: #333;
+    text-decoration: none;
+}
+
 .container article p {
     font-size: 12px;
     margin-top: 5px;
@@ -28,4 +33,30 @@
 .form-group {
     display: flex;
     flex-direction: column;
+}
+
+.btn {
+    background-color: #bbb;
+    border: 1px solid #ccc;
+    color: black;
+    font-size: 1rem;
+    padding: .3rem .5rem .3rem .5rem;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #ccc;
+}
+
+.btn-primary {
+    background-color: rgb(42, 129, 230);
+    border: 1px solid rgb(42, 129, 230);
+    color: white;
+    font-size: 1rem;
+    padding: .3rem .5rem;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background-color: rgb(13, 99, 197);
 }
