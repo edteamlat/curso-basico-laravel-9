@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 class PostsController extends Controller
@@ -23,7 +24,7 @@ class PostsController extends Controller
      */
     public function create()
     {
-        return "Página de formulario de creación.";
+        return view('posts.create');
     }
 
     /**
@@ -34,7 +35,13 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Post::create([
+            'title' => $request->input('title'),
+            'excerpt' => $request->input('excerpt'),
+            'content' => $request->input('content'),
+        ]);
+
+        return redirect('/');
     }
 
     /**

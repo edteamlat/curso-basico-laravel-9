@@ -17,3 +17,16 @@
     font-size: 12px;
     margin-top: 5px;
 }
+
+.form-post {
+    gap: .5rem 0rem;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem auto 0 auto;
+    width: 30%;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
