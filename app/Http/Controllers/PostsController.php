@@ -50,9 +50,14 @@ class PostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Post $post)
     {
-        return "Página para mostrar un artículo específico ({$id}).";
+        // dd($id);
+        // $post = Post::findOrFail($id);
+
+        return view('posts.show')->with([
+            'post' => $post,
+        ]);
     }
 
     /**

@@ -8,26 +8,28 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <form class="form-post" action="/posts" method="POST">
-        <h2>Crear post</h2>
+    <div class="container">
+        <form class="form-post" action="/posts" method="POST">
+            <h2>Crear post</h2>
 
-        @csrf
+            @csrf
 
-        <div class="form-group">
-            <label>Título</label>
-            <input type="text" name="title">
-        </div>
-        <div class="form-group">
-            <label>Resumen</label>
-            <textarea name="excerpt" id="" cols="30" rows="4"></textarea>
-        </div>
-        <div class="form-group">
-            <label>Contenido</label>
-            <textarea name="content" id="" cols="30" rows="6"></textarea>
-        </div>
-        <div>
-            <button type="submit" class="btn">Guardar</button>
-        </div>
-    </form>
+            <div class="form-group">
+                <label>Título</label>
+                <input type="text" name="title">
+            </div>
+            <div class="form-group">
+                <label>Resumen</label>
+                <textarea name="excerpt" id="" cols="30" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Contenido</label>
+                <textarea name="content" id="" cols="30" rows="6"></textarea>
+            </div>
+            <div>
+                <button type="submit" class="btn">Guardar</button>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
