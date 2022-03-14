@@ -15,6 +15,11 @@
         </article>
         <a href="/" class="btn">&#8592; Inicio</a>
         <a href="/posts/{{ $post->id }}/edit" class="btn">Editar</a>
+        <form action="/posts/{{ $post->id }}" method="POST" style="display: inline-block;">
+            @method('DELETE')
+            @csrf
+            <button type="submit" class="btn" onclick="return confirm('¿Estás seguro de borrar este post?')">Eliminar</button>
+        </form>
     </div>
 </body>
 </html>

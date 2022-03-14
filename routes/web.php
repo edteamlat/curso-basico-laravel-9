@@ -13,7 +13,7 @@ Route::controller(PostsController::class)->group(function () {
     Route::post('/posts', "store");
     Route::get('/posts/{post}/edit', "edit");
     Route::patch('/posts/{post}', "update");
-    Route::delete('/posts/{id}', "destroy");
+    Route::delete('/posts/{post}', "destroy");
 
 });
 
