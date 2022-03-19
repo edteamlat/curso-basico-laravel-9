@@ -20,6 +20,14 @@
             @csrf
             <button type="submit" class="btn" onclick="return confirm('¿Estás seguro de borrar este post?')">Eliminar</button>
         </form>
+        <h4>Comentarios</h4>
+        <div>
+            @foreach ($comments as $comment)
+                <div>{{ $comment->content }}</div>
+                <small style="color: #aaa;">{{ $comment->name }}</small>
+                <hr>
+            @endforeach
+        </div>
     </div>
 </body>
 </html>

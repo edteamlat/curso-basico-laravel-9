@@ -52,11 +52,11 @@ class PostsController extends Controller
      */
     public function show(Post $post)
     {
-        // dd($id);
-        // $post = Post::findOrFail($id);
+        $comments = $post->comments;
 
         return view('posts.show')->with([
             'post' => $post,
+            'comments' => $comments,
         ]);
     }
 
