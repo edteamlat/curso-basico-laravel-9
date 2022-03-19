@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Editar post</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/app.css">
 </head>
 <body>
-    <div class="container">
-        <form class="form-post" action="/posts/{{ $post->id }}" method="POST">
-            <h2>Editar post</h2>
+    <div class="w-1/2 mx-auto">
+        <form class="mt-5" action="/posts/{{ $post->id }}" method="POST">
+            <h2 class="font-bold text-xl">Editar post</h2>
 
             @csrf
             @method('PATCH')
@@ -27,7 +27,7 @@
                 <label>Contenido</label>
                 <textarea name="content" id="" cols="30" rows="6">{{ $post->content }}</textarea>
             </div>
-            <div>
+            <div class="flex gap-x-1 mt-2">
                 <button type="submit" class="btn-primary">Actualizar</button>
                 <a href="/posts/{{ $post->id }}" class="btn">Cancelar</a>
             </div>
