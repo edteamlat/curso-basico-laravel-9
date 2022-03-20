@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostsController;
 
+Route::view('/layout', 'layouts.app');
 Route::get('/', [HomeController::class, "show"]);
 
 Route::controller(PostsController::class)->group(function () {
