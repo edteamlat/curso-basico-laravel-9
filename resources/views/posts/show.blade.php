@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Post</title>
-    <link rel="stylesheet" href="/css/app.css">
-</head>
-<body>
+<x-layout :title="$post->title">
     <div class="w-1/2 mx-auto">
         <article class="mt-5">
             <h1 class="text-xl font-bold border-gray-300 border-b">{{ $post->title }}</h1>
@@ -31,5 +22,4 @@
             @endforeach
         </div>
     </div>
-</body>
-</html>
+</x-layout>

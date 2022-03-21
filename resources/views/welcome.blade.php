@@ -1,8 +1,4 @@
-@extends('layouts.app')
-
-@section('title', 'Bienvenidos')
-
-@section('content')
+<x-layout :title="'Bienvenidos'">
     <div class="w-1/2 mx-auto">
 
         @foreach ($posts as $post)
@@ -15,4 +11,4 @@
         @endforeach
 
     </div>
-@endsection
+</x-layout>

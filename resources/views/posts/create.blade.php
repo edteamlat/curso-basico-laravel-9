@@ -1,16 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Crear post</title>
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
-    <div class="container">
+<x-layout :title="'Crear nuevo post'">
+    <div class="w-1/2 mx-auto">
         <form class="form-post" action="/posts" method="POST">
-            <h2>Crear post</h2>
+            <h2 class="font-bold text-xl">Crear post</h2>
 
             @csrf
 
@@ -26,10 +17,10 @@
                 <label>Contenido</label>
                 <textarea name="content" id="" cols="30" rows="6"></textarea>
             </div>
-            <div>
-                <button type="submit" class="btn">Guardar</button>
+            <div class="flex gap-x-1 mt-2">
+                <button type="submit" class="btn-primary">Guardar</button>
+                <a href="/" class="btn">Cancelar</a>
             </div>
         </form>
     </div>
-</body>
-</html>
+</x-layout>

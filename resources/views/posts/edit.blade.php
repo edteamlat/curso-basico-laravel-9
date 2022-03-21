@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Editar post</title>
-    <link rel="stylesheet" href="/css/app.css">
-</head>
-<body>
+<x-layout :title="'Editar post '">
     <div class="w-1/2 mx-auto">
         <form class="mt-5" action="/posts/{{ $post->id }}" method="POST">
             <h2 class="font-bold text-xl">Editar post</h2>
@@ -33,5 +24,4 @@
             </div>
         </form>
     </div>
-</body>
-</html>
+</x-layout>
