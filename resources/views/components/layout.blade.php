@@ -7,7 +7,7 @@
     <title>{{ $title }} - Blog de Jairo</title>
     <link rel="stylesheet" href="/css/app.css">
     {{-- <link rel="stylesheet" href="/css/bootstrap.css"> --}}
-    {{-- <script src="/js/app.js"></script> --}}
+    <script src="/js/app.js" defer></script>
 </head>
 <body>
 
