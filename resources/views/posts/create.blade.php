@@ -14,15 +14,24 @@
 
             <div class="form-group">
                 <label>Título</label>
-                <input type="text" name="title">
+                <input type="text" name="title" value="{{ old('title') }}">
+                @error('title')
+                    <div class="text-red-500 text-xs">{{ $message }}</div>
+                @enderror
             </div>
             <div class="form-group">
                 <label>Resumen</label>
-                <textarea name="excerpt" id="" cols="30" rows="4"></textarea>
+                <textarea name="excerpt" id="" cols="30" rows="4">{{ old('excerpt') }}</textarea>
+                @error('excerpt')
+                    <div class="text-red-500 text-xs">{{ $message }}</div>
+                @enderror
             </div>
             <div class="form-group">
                 <label>Contenido</label>
-                <textarea name="content" id="" cols="30" rows="6"></textarea>
+                <textarea name="content" id="" cols="30" rows="6">{{ old('content') }}</textarea>
+                @error('content')
+                    <div class="text-red-500 text-xs">{{ $message }}</div>
+                @enderror
             </div>
             <div class="flex gap-x-1 mt-2">
                 <button type="submit" class="btn-primary">Guardar</button>

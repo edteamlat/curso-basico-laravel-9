@@ -35,6 +35,12 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'title' => 'required|min:3',
+            'excerpt' => 'required|min:10',
+            'content' => 'required|min:15',
+        ]);
+
         Post::create([
             'title' => $request->input('title'),
             'excerpt' => $request->input('excerpt'),
