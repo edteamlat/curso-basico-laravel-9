@@ -1,5 +1,8 @@
-<x-layout :title="'Crear nuevo post'">
-    <div class="w-1/2 mx-auto">
+<x-app-layout>
+    <x-slot name="title">Crear nuevo post</x-slot>
+    <x-slot name="header">Crear nuevo post</x-slot>
+
+    <div class="w-1/2 mx-auto mt-5">
         <form class="form-post" action="/posts" method="POST">
             <h2 class="font-bold text-xl">Crear post</h2>
 
@@ -23,4 +26,4 @@
             </div>
         </form>
     </div>
-</x-layout>
+</x-app-layout>

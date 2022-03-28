@@ -1,6 +1,9 @@
-<x-layout :title="'Editar post '">
-    <div class="w-1/2 mx-auto">
-        <form class="mt-5" action="/posts/{{ $post->id }}" method="POST">
+<x-app-layout>
+    <x-slot name="title">Editar post</x-slot>
+    <x-slot name="header">Editar post</x-slot>
+
+    <div class="w-1/2 mx-auto mt-5">
+        <form action="/posts/{{ $post->id }}" method="POST">
             <h2 class="font-bold text-xl">Editar post</h2>
 
             @csrf
@@ -24,4 +27,4 @@
             </div>
         </form>
     </div>
-</x-layout>
+</x-app-layout>

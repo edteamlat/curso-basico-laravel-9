@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostsController;
 
-Route::view('/layout', 'layouts.app');
 Route::get('/', [HomeController::class, "show"]);
 
 Route::controller(PostsController::class)->group(function () {
@@ -15,6 +14,10 @@ Route::controller(PostsController::class)->group(function () {
     Route::get('/posts/{post}/edit', "edit");
     Route::patch('/posts/{post}', "update");
     Route::delete('/posts/{post}', "destroy");
-
 });
 
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';

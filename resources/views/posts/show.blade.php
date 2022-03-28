@@ -1,4 +1,7 @@
-<x-layout :title="$post->title">
+<x-guest-layout>
+    <x-slot name="title">{{ $post->title }}</x-slot>
+    <x-slot name="header">{{ $post->title }}</x-slot>
+
     <div class="w-1/2 mx-auto">
         <article class="mt-5">
             <h1 class="text-xl font-bold border-gray-300 border-b">{{ $post->title }}</h1>
@@ -22,4 +25,4 @@
             @endforeach
         </div>
     </div>
-</x-layout>
+</x-guest-layout>

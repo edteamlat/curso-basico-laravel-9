@@ -1,4 +1,6 @@
-<x-layout :title="'Bienvenidos'">
+<x-guest-layout>
+    <x-slot name="title">Bienvenidos</x-slot>
+    <x-slot name="header">Bienvenidos</x-slot>
     <div class="w-1/2 mx-auto">
 
         @foreach ($posts as $post)
@@ -11,4 +13,4 @@
         @endforeach
 
     </div>
-</x-layout>
+</x-guest-layout>
