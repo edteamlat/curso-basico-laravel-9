@@ -1,6 +1,10 @@
 <x-app-layout>
     <x-slot name="title">Editar post</x-slot>
-    <x-slot name="header">Editar post</x-slot>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            Editar post
+        </h2>
+    </x-slot>
 
     <div class="w-1/2 mx-auto mt-5">
         <form action="/posts/{{ $post->id }}" method="POST">

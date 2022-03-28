@@ -1,6 +1,10 @@
 <x-app-layout>
     <x-slot name="title">Crear nuevo post</x-slot>
-    <x-slot name="header">Crear nuevo post</x-slot>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            Crear nuevo post
+        </h2>
+    </x-slot>
 
     <div class="w-1/2 mx-auto mt-5">
         <form class="form-post" action="/posts" method="POST">

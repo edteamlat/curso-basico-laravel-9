@@ -1,6 +1,7 @@
 <x-guest-layout>
-    <x-slot name="title">Bienvenidos</x-slot>
-    <x-slot name="header">Bienvenidos</x-slot>
+    <x-slot name="title">
+        Bienvenidos
+    </x-slot>
     <div class="w-1/2 mx-auto">
 
         @foreach ($posts as $post)

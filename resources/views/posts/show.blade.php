@@ -1,6 +1,5 @@
 <x-guest-layout>
     <x-slot name="title">{{ $post->title }}</x-slot>
-    <x-slot name="header">{{ $post->title }}</x-slot>
 
     <div class="w-1/2 mx-auto">
         <article class="mt-5">
