@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use Illuminate\Http\Request;
+use App\Http\Requests\PostRequest;
 
 class PostsController extends Controller
 {
@@ -33,14 +34,8 @@ class PostsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PostRequest $request)
     {
-        $request->validate([
-            'title' => 'required|min:3',
-            'excerpt' => 'required|min:10',
-            'content' => 'required|min:15',
-        ]);
-
         Post::create([
             'title' => $request->input('title'),
             'excerpt' => $request->input('excerpt'),
