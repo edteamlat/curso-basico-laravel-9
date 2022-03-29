@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\CommentsController;
 
 Route::get('/', [HomeController::class, "show"]);
 
@@ -19,6 +20,8 @@ Route::controller(PostsController::class)->group(function () {
     });
     Route::get('/posts/{post}', "show");
 });
+
+Route::post('/posts/{post}/comments', [CommentsController::class, 'store']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

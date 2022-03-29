@@ -32,5 +32,24 @@
                 <hr>
             @endforeach
         </div>
+        <form class="mt-8" action="/posts/{{ $post->id }}/comments" method="POST">
+            @csrf
+            <h3>Escribe tu comentario</h3>
+            <div class="form-group">
+                <label>Nombre</label>
+                <input type="text" name="name">
+                @error('name')
+                    <div class="text-red-500 text-xs">{{ $message }}</div>
+                @enderror
+            </div>
+            <div class="form-group">
+                <label>Comentario</label>
+                <textarea type="text" name="content"></textarea>
+                @error('content')
+                    <div class="text-red-500 text-xs">{{ $message }}</div>
+                @enderror
+            </div>
+            <button type="submit" class="btn-primary mt-2">Enviar</button>
+        </form>
     </div>
 </x-dynamic-component>
