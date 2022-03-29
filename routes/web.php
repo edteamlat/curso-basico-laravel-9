@@ -21,7 +21,8 @@ Route::controller(PostsController::class)->group(function () {
     Route::get('/posts/{post}', "show");
 });
 
-Route::post('/posts/{post}/comments', [CommentsController::class, 'store']);
+Route::middleware('forbidden.words')
+    ->post('/posts/{post}/comments', [CommentsController::class, 'store']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
